@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Pickup Line</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #pickup-line {
+            font-size: 1.5em;
+            color: #333;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Random Pickup Line Generator</h1>
+    <div id="pickup-line">Click the button to get a random pickup line!</div>
+    <button onclick="generatePickupLine()">Get Pickup Line</button>
+
+    <script>
+        const pickupLines = [
+            "Rpl is the funnest thing",
+            "Thanks you for supporting btr",
+            "Btr is the best esport team in indonesia",
+            "Hey ho hey beteerrrr"
+        ];
+
+        function generatePickupLine() {
+            const randomIndex = Math.floor(Math.random() * pickupLines.length);
+            const line = pickupLines[randomIndex];
+            document.getElementById('pickup-line').innerText = line;
+        }
+    </script>
+</body>
+</html>
